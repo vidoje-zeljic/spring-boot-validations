@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@MinMax
 public class ValidationRequestDto {
     private String name;
-    @MinMax
     private int min;
     @Max(10)
     private int max;
