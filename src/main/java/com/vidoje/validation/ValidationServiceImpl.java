@@ -1,10 +1,13 @@
 package com.vidoje.validation;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Validated
 @Service
 public class ValidationServiceImpl implements ValidationService {
 
@@ -16,7 +19,7 @@ public class ValidationServiceImpl implements ValidationService {
     }
 
     @Override
-    public void post(ValidationRequestDto requestDto) {
+    public void post(@Valid ValidationRequestDto requestDto) {
         list.add(requestDto);
     }
 }
