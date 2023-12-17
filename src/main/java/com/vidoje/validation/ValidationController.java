@@ -1,14 +1,14 @@
 package com.vidoje.validation;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Validated
 @RestController
 public class ValidationController {
 
@@ -23,7 +23,7 @@ public class ValidationController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void post(ValidationRequestDto requestDto) {
+    public void post(@Valid @RequestBody ValidationRequestDto requestDto) {
         validationService.post(requestDto);
     }
 }
