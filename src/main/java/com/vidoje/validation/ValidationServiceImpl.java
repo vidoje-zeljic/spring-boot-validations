@@ -18,6 +18,7 @@ public class ValidationServiceImpl implements ValidationService {
         return list;
     }
 
+    @Validated(OnCreate.class)
     @Override
     public void post(@Valid ValidationRequestDto requestDto) {
         list.add(requestDto);

@@ -12,9 +12,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({ ElementType.TYPE })
 @Retention(RUNTIME)
-@Constraint(validatedBy = MinMaxValidator.class)
+@Constraint(validatedBy = MinMaxUpdateValidator.class)
 @Documented
-public @interface MinMax {
+public @interface MinMaxUpdate {
 
     String message() default "{min/max}";
 

@@ -4,7 +4,7 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class MinMaxValidator implements ConstraintValidator<MinMax, ValidationRequestDto> {
+public class MinMaxUpdateValidator implements ConstraintValidator<MinMaxUpdate, ValidationRequestDto> {
 
     @Autowired
     private ValidationService validationService;
@@ -12,7 +12,7 @@ public class MinMaxValidator implements ConstraintValidator<MinMax, ValidationRe
     @Override
     public boolean isValid(ValidationRequestDto value, ConstraintValidatorContext context) {
         validationService.get().forEach(System.out::println);
-        if (value.getMin() < 1) {
+        if (value.getMax() > 10) {
             return false;
         } else {
             return true;
