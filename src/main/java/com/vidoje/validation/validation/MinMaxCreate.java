@@ -1,4 +1,4 @@
-package com.vidoje.validation;
+package com.vidoje.validation.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -12,9 +12,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({ ElementType.TYPE })
 @Retention(RUNTIME)
-@Constraint(validatedBy = MinMaxUpdateValidator.class)
+@Constraint(validatedBy = MinMaxCreateValidator.class)
 @Documented
-public @interface MinMaxUpdate {
+public @interface MinMaxCreate {
 
     String message() default "{min/max}";
 

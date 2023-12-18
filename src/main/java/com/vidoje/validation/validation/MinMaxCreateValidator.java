@@ -1,5 +1,7 @@
-package com.vidoje.validation;
+package com.vidoje.validation.validation;
 
+import com.vidoje.validation.dto.ValidationRequestDto;
+import com.vidoje.validation.service.ValidationService;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;

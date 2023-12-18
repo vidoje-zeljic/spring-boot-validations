@@ -1,5 +1,7 @@
-package com.vidoje.validation;
+package com.vidoje.validation.controller;
 
+import com.vidoje.validation.dto.ValidationRequestDto;
+import com.vidoje.validation.service.ValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

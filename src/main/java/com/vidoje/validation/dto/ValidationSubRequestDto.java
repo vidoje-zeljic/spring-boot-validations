@@ -1,5 +1,6 @@
-package com.vidoje.validation;
+package com.vidoje.validation.dto;
 
+import com.vidoje.validation.validation.OnCreate;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Data;

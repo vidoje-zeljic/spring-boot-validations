@@ -1,5 +1,6 @@
-package com.vidoje.validation;
+package com.vidoje.validation.service;
 
+import com.vidoje.validation.dto.ValidationRequestDto;
 import jakarta.validation.Valid;
 
 import java.util.List;

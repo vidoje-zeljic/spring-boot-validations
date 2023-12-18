@@ -1,4 +1,4 @@
-package com.vidoje.validation;
+package com.vidoje.validation.exception;
 
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
